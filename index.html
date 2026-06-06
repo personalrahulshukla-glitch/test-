@@ -1,37 +1,9 @@
 <!doctype html>
 <html lang="en">
-<head>  
+<head>
   <meta charset="utf-8">
-  <!-- Modern Viewport Configuration -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover, user-scalable=yes">
-  <meta name="supported-color-schemes" content="light">
-  <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#052e1a" media="(prefers-color-scheme: light)">
-  
-  <!-- iOS Web App Configuration -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Anant Greens">
-  <meta name="apple-system-font-smoothing" content="antialiased">
-  <meta name="apple-touch-fullscreen" content="yes">
-  
-  <!-- iPhone/iPad App Icons (Multiple Sizes for Various Devices) -->
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23166534' width='180' height='180'/><text x='50%' y='50%' font-size='80' fill='%23d4af37' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>AG</text></svg>">
-  <link rel="apple-touch-icon" sizes="120x120" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect fill='%23166534' width='120' height='120'/><text x='50%' y='50%' font-size='60' fill='%23d4af37' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>AG</text></svg>">
-  <link rel="apple-touch-icon" sizes="152x152" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 152 152'><rect fill='%23166534' width='152' height='152'/><text x='50%' y='50%' font-size='70' fill='%23d4af37' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>AG</text></svg>">
-  <link rel="apple-touch-icon" sizes="167x167" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 167 167'><rect fill='%23166534' width='167' height='167'/><text x='50%' y='50%' font-size='75' fill='%23d4af37' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>AG</text></svg>">
-  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23166534' width='180' height='180'/><text x='50%' y='50%' font-size='80' fill='%23d4af37' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>AG</text></svg>">
-  
-  <!-- Format Detection & Security -->
-  <meta name="format-detection" content="telephone=no,email=no,address=no">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  
-  <!-- Security & Performance -->
-  <meta name="description" content="Anant Greens Plot Inventory - Interactive property map with plot details, availability status, and quick enquiry">
-  <meta name="keywords" content="property, plot inventory, real estate, anant greens">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#052e1a">
   <title>Anant Greens Plot Inventory</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -53,82 +25,20 @@
     };
   </script>
   <style>
-    /* iOS Compatibility & Performance */
-    html { 
-      scroll-behavior: smooth;
-      /* Prevent horizontal scroll on iOS */
-      overflow-x: hidden;
-      /* Smooth rendering on iOS */
-      -webkit-text-size-adjust: 100%;
-    }
-    
+    html { scroll-behavior: smooth; }
     body {
       overflow-x: hidden;
       background:
         radial-gradient(circle at 9% 3%, rgba(212, 175, 55, 0.18), transparent 23rem),
         radial-gradient(circle at 88% 18%, rgba(34, 197, 94, 0.13), transparent 24rem),
         linear-gradient(180deg, #f7faf7 0%, #edf3ef 100%);
-      
-      /* iOS Safe Area Padding for Notch/Dynamic Island */
       padding-left: env(safe-area-inset-left);
       padding-right: env(safe-area-inset-right);
       padding-bottom: env(safe-area-inset-bottom);
-      padding-top: env(safe-area-inset-top);
-      
-      /* Font rendering optimization */
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      
-      /* Prevent zoom on double tap */
-      touch-action: manipulation;
     }
-    
-    /* Remove gray tap highlights on all interactive elements */
-    * {
-      -webkit-tap-highlight-color: transparent;
-      -webkit-touch-callout: none;
-    }
-    
-    /* iOS Form Input Fixes */
-    input, textarea, select {
-      -webkit-appearance: none;
-      -webkit-border-radius: 0;
-      font-size: 16px !important;
-      font-family: inherit;
-      padding: 0.5rem 0.75rem;
-      border: none;
-      background: #fff;
-    }
-    
-    /* iOS Select Dropdown Styling */
-    select {
-      background-image: linear-gradient(45deg, transparent 50%, #475569 50%), 
-                        linear-gradient(135deg, #475569 50%, transparent 50%);
-      background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
-      background-repeat: no-repeat;
-      background-size: 5px 5px, 5px 5px;
-      padding-right: 2rem;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-    
-    /* iOS Button Optimization */
-    button {
-      -webkit-appearance: none;
-      min-height: 44px;
-      cursor: pointer;
-      border-radius: 0.5rem;
-      transition: all 0.2s ease;
-    }
-    
-    /* Smooth momentum scrolling for iOS */
-    .map-stage, 
-    [role="dialog"],
-    main {
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-    }
-    
+    * { -webkit-tap-highlight-color: transparent; }
+    input, textarea, select { font-size: 16px; }
     .loader, .mini-loader {
       border-radius: 9999px;
       animation: spin 0.8s linear infinite;
@@ -146,108 +56,38 @@
       border-top-color: #fff;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
-    
     .map-shell {
       background: linear-gradient(180deg, #ffffff 0%, #f4f8f3 100%);
       border: 1px solid rgba(148, 163, 184, 0.35);
       overflow: hidden;
     }
-    
     .map-stage {
-      contain: layout paint style;
+      contain: layout paint;
       overscroll-behavior: contain;
-      touch-action: pan-x pan-y pinch-zoom;
+      touch-action: pan-x pan-y;
       background: #f8faf7;
       background-image:
         linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
       background-size: 32px 32px;
-      position: relative;
-      z-index: 1;
-      
-      /* iOS specific */
-      -webkit-user-select: none;
-      user-select: none;
+      -webkit-overflow-scrolling: touch;
     }
-    
-    #mapBackground {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      contain: paint;
-    }
-    
     #mapObject {
       align-items: flex-start;
       height: max-content;
       min-height: 100%;
       min-width: 100%;
       width: max-content;
-      position: relative;
-      z-index: 1;
     }
-    
     #mapSvg {
       height: 100%;
       width: auto;
       max-width: none;
       display: block;
       border-radius: 0.5rem;
-      background: transparent;
+      background: #fff;
       box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
-      
-      /* iOS Optimization */
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-      user-select: none;
-      touch-action: manipulation;
-      -webkit-user-drag: none;
-      
-      /* Performance optimization */
-      contain: layout paint;
-      will-change: transform;
     }
-    
-    /* SVG Plot Paths - Touch Optimization */
-    [id^="plot-"] {
-      cursor: pointer;
-      transition: fill 0.2s ease, opacity 0.2s ease;
-      -webkit-user-select: none;
-      user-select: none;
-      vector-effect: non-scaling-stroke;
-    }
-    
-    [id^="plot-"]:active {
-      filter: brightness(1.15);
-    }
-    
-    /* Dialog Optimization for iOS */
-    dialog {
-      position: fixed;
-      inset: 0;
-      padding: 0;
-      border: none;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 50;
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-    }
-    
-    dialog::backdrop {
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-    }
-    
-    /* Prevents rubber band effect on iOS */
-    body, html {
-      overscroll-behavior: none;
-      -webkit-user-select: none;
-    }
-    
     select.status-select {
       background-image:
         linear-gradient(45deg, transparent 50%, #475569 50%),
@@ -258,7 +98,7 @@
     }
   </style>
 </head>
-<body class="min-h-[100dvh] overflow-x-hidden text-slate-900 antialiased">
+<body class="min-h-screen overflow-x-hidden text-slate-900 antialiased">
   <header class="relative z-40 border-b border-gold/40 bg-forest text-white shadow-lg lg:sticky lg:top-0">
     <div class="mx-auto max-w-[1500px] px-4 py-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
@@ -337,16 +177,16 @@
           <span class="inline-flex items-center gap-2 rounded-full bg-slate-100 ring-1 ring-slate-200 px-3 py-1.5"><span class="h-3 w-3 rounded-full bg-rose-500"></span>Sold</span>
         </div>
 
-        <div id="mapStage" class="map-stage relative h-[64dvh] min-h-[520px] overflow-auto rounded-lg border border-slate-200 p-4 sm:h-[72dvh]">
+        <div id="mapStage" class="map-stage relative h-[64vh] min-h-[520px] overflow-auto rounded-lg border border-slate-200 p-4 sm:h-[72vh]">
           <div id="mapLoading" class="absolute inset-0 z-10 flex items-center justify-center bg-slate-950/60 backdrop-blur-[2px] transition-opacity duration-300">
             <div class="flex flex-col items-center gap-4 text-center text-white">
               <div class="loader"></div>
               <p class="text-sm font-bold">Loading plot map and sheet data</p>
             </div>
           </div>
-          <<div id="mapObject" class="mx-auto flex h-full w-full items-center justify-center rounded-md">
-  <svg id="mapSvg" width="1500" height="1364" viewBox="0 0 1500 1364" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <image id="layout-base" href="map-background.jpeg" xlink:href="map-background.jpeg" width="1500" height="1364" preserveAspectRatio="none"/>
+          <div id="mapObject" class="mx-auto flex h-full w-full items-center justify-center rounded-md">
+<svg id="mapSvg" width="1500" height="1364" viewBox="0 0 1500 1364" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image id="layout-base" href="map-background.jpeg" xlink:href="map-background.jpeg" width="1500" height="1364" preserveAspectRatio="none" decoding="async"/>
 <g id="Plots-Layer" opacity="1">
 <path id="plot-114" d="M1216.82 256.575L1213.31 337.193L1173.71 319.543L1203.79 253.236L1216.82 256.575Z" stroke="white"/>
 <path id="plot-113" d="M1171.71 244.649L1203.79 253.713L1174.72 320.02L1143.64 305.709L1171.71 244.649Z" stroke="white"/>
@@ -477,13 +317,13 @@
           <div class="grid gap-4 sm:grid-cols-2">
             <label class="block">
               <span class="text-xs font-black uppercase tracking-wide text-slate-500">Availability</span>
-              <select id="statusFilter" class="mt-2 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-base font-bold text-slate-800 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
+              <select id="statusFilter" class="mt-2 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm font-bold text-slate-800 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
                 <option value="">All Assets</option>
               </select>
             </label>
             <label class="block">
               <span class="text-xs font-black uppercase tracking-wide text-slate-500">Find Plot #</span>
-              <input id="plotFinder" inputmode="numeric" placeholder="77" class="mt-2 h-12 w-full rounded-lg border border-slate-300 px-3 text-base font-bold text-slate-800 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
+              <input id="plotFinder" inputmode="numeric" placeholder="77" class="mt-2 h-12 w-full rounded-lg border border-slate-300 px-3 text-sm font-bold text-slate-800 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
             </label>
           </div>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
@@ -530,7 +370,7 @@
   </main>
 
   <div id="enquiryModal" class="fixed inset-0 z-50 hidden bg-slate-950/55 p-4 backdrop-blur-sm" role="dialog" aria-modal="true">
-    <div class="mx-auto mt-10 max-h-[82dvh] max-w-md overflow-y-auto rounded-xl bg-white p-5 shadow-2xl md:mt-16">
+    <div class="mx-auto mt-10 max-h-[82vh] max-w-md overflow-y-auto rounded-xl bg-white p-5 shadow-2xl md:mt-16">
       <div class="mb-4">
         <p class="text-xs font-black uppercase tracking-wide text-slate-500">Quick Enquiry</p>
         <h2 class="mt-1 text-2xl font-black text-slate-950">Interested in Plot #<span id="enquiryPlotNumber">-</span>?</h2>
@@ -539,15 +379,15 @@
       <form id="enquiryForm" class="grid gap-4">
         <label class="block">
           <span class="text-xs font-black uppercase tracking-wide text-slate-500">Full Name</span>
-          <input id="enquiryName" type="text" required placeholder="Your name" class="mt-2 h-11 w-full rounded-lg border border-slate-300 px-3 text-base font-semibold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
+          <input id="enquiryName" type="text" required placeholder="Your name" class="mt-2 h-11 w-full rounded-lg border border-slate-300 px-3 text-sm font-semibold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
         </label>
         <label class="block">
           <span class="text-xs font-black uppercase tracking-wide text-slate-500">Address</span>
-          <textarea id="enquiryAddress" required placeholder="Your address" class="mt-2 min-h-24 w-full rounded-lg border border-slate-300 px-3 py-2 text-base font-semibold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100"></textarea>
+          <textarea id="enquiryAddress" required placeholder="Your address" class="mt-2 min-h-24 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100"></textarea>
         </label>
         <label class="block">
           <span class="text-xs font-black uppercase tracking-wide text-slate-500">Mobile Number</span>
-          <input id="enquiryMobile" type="tel" required placeholder="+91 98765 43210" pattern="[0-9+\s\-]+" class="mt-2 h-11 w-full rounded-lg border border-slate-300 px-3 text-base font-semibold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
+          <input id="enquiryMobile" type="tel" required placeholder="+91 98765 43210" pattern="[0-9+\s\-]+" class="mt-2 h-11 w-full rounded-lg border border-slate-300 px-3 text-sm font-semibold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100">
         </label>
         <div class="flex gap-3 pt-2">
           <button id="submitEnquiryBtn" type="submit" class="w-full h-11 rounded-lg bg-forest px-4 text-sm font-black text-white transition hover:bg-leaf">Submit & View</button>
@@ -557,7 +397,7 @@
   </div>
 
   <div id="plotModal" class="fixed inset-0 z-50 hidden bg-slate-950/55 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="mx-auto mt-10 max-h-[82dvh] max-w-md overflow-y-auto rounded-xl bg-white p-5 shadow-2xl md:mt-16 md:max-w-xl">
+    <div class="mx-auto mt-10 max-h-[82vh] max-w-md overflow-y-auto rounded-xl bg-white p-5 shadow-2xl md:mt-16 md:max-w-xl">
       <div class="mb-4 flex items-start justify-between gap-3">
         <div>
           <p class="text-xs font-black uppercase tracking-wide text-slate-500">Selected Plot</p>
@@ -596,6 +436,8 @@
       zoom: 1,
       pinchStartDistance: 0,
       pinchStartZoom: 1,
+      lastTapPlotId: "",
+      lastTapAt: 0,
       enquirySubmittedThisSession: false,
       interestedCountMap: {}
     };
@@ -825,6 +667,10 @@
           stroke-width: 1.05px !important;
           vector-effect: non-scaling-stroke;
           transition: fill 160ms ease, opacity 160ms ease, stroke 160ms ease;
+          pointer-events: auto !important;
+          touch-action: manipulation;
+          user-select: none;
+          -webkit-user-select: none;
         }
         #Plots-Layer > [id^="plot-"] * {
           stroke: rgba(255,255,255,0.82) !important;
@@ -867,12 +713,18 @@
 
       getPlotShapes().forEach(shape => {
         const plotId = getPlotIdFromElement(shape);
-        shape.addEventListener("click", () => selectPlot(plotId));
+        shape.addEventListener("click", event => {
+          event.preventDefault();
+          handlePlotTap(plotId);
+        });
         shape.setAttribute("tabindex", "0");
         shape.setAttribute("role", "button");
         shape.setAttribute("aria-label", `Plot ${plotId}`);
         shape.addEventListener("keydown", event => {
-          if (event.key === "Enter" || event.key === " ") selectPlot(plotId);
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            showPlotDetailForId(plotId);
+          }
         });
       });
 
@@ -1054,6 +906,7 @@
         els.modalDetails.appendChild(item);
       });
 
+      // Show interested people count for "In Talk" plots
       if (normalizeStatus(status) === "in-talk") {
         const interestedCount = state.interestedCountMap[rowId] || 0;
         const interestedItem = document.createElement("div");
@@ -1061,6 +914,7 @@
         interestedItem.innerHTML = `<p class="text-xs font-black uppercase tracking-wide text-amber-600">Interested People</p><p class="mt-1 text-base font-black text-amber-900">${interestedCount} people</p>`;
         els.modalDetails.appendChild(interestedItem);
 
+        // Show admin control for interested count
         if (state.isAdmin) {
           const adminItem = document.createElement("div");
           adminItem.className = "rounded-lg border border-slate-200 p-3";
@@ -1071,8 +925,7 @@
           input.type = "number";
           input.min = "0";
           input.value = interestedCount;
-          /* iOS Fix: Using text-base here to prevent native zoom */
-          input.className = "flex-1 h-11 rounded-lg border border-slate-300 px-3 text-base font-bold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100";
+          input.className = "flex-1 h-11 rounded-lg border border-slate-300 px-3 text-sm font-bold text-slate-900 outline-none focus:border-leaf focus:ring-4 focus:ring-emerald-100";
           const btn = document.createElement("button");
           btn.type = "button";
           btn.className = "h-11 rounded-lg bg-forest px-4 text-sm font-black text-white transition hover:bg-leaf";
@@ -1136,7 +989,6 @@
       const wrap = document.createElement("div");
       wrap.className = "flex min-w-[10rem] items-center gap-2";
       const select = document.createElement("select");
-      /* iOS Fix: Ensure text-base on mobile selects */
       select.className = "status-select min-h-12 w-full appearance-none rounded-lg border border-slate-300 bg-white px-3 py-3 pr-9 text-base font-black text-slate-900 outline-none transition focus:border-leaf focus:ring-4 focus:ring-emerald-100 disabled:cursor-wait disabled:opacity-70 lg:min-h-10 lg:py-2 lg:text-sm";
       select.disabled = state.updatingIds.has(rowId);
       select.setAttribute("aria-label", `Update status for plot ${rowId}`);
@@ -1256,6 +1108,7 @@
         closeEnquiryModal();
         showToast("Enquiry submitted successfully! 🎉", "success");
         
+        // Show plot details after enquiry submission
         const row = getRowById(plotId);
         if (row) {
           setTimeout(() => openPlotModal(row), 500);
@@ -1266,6 +1119,41 @@
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
+      }
+    }
+
+    function handlePlotTap(plotId) {
+      const normalized = String(plotId || "").trim();
+      const now = Date.now();
+      const isDoubleTap = state.lastTapPlotId === normalized && now - state.lastTapAt <= 360;
+      state.lastTapPlotId = normalized;
+      state.lastTapAt = now;
+
+      if (isDoubleTap) {
+        showPlotDetailForId(normalized);
+        return;
+      }
+
+      selectPlot(normalized);
+    }
+
+    function showPlotDetailForId(plotId) {
+      const normalized = String(plotId || "").trim();
+      const row = getRowById(normalized);
+      if (!row) {
+        showToast(`Plot #${normalized} was not found in the sheet`, "error");
+        return;
+      }
+      state.selectedId = normalized;
+      if (els.plotFinder) els.plotFinder.value = normalized;
+      render();
+      centerMapPlot(normalized);
+
+      // Show enquiry form if user is not admin and hasn't submitted enquiry this session
+      if (!state.isAdmin && !state.enquirySubmittedThisSession) {
+        openEnquiryModal(normalized);
+      } else {
+        openPlotModal(row);
       }
     }
 
@@ -1280,12 +1168,6 @@
       if (els.plotFinder) els.plotFinder.value = normalized;
       render();
       centerMapPlot(normalized);
-      
-      if (!state.isAdmin && !state.enquirySubmittedThisSession) {
-        openEnquiryModal(normalized);
-      } else {
-        openPlotModal(row);
-      }
     }
 
     function centerMapPlot(plotId) {
